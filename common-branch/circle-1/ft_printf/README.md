@@ -1,0 +1,1 @@
+![Project mark](./mark.png)
