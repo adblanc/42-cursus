@@ -1,0 +1,43 @@
+<script type="text/html" id="warWaitingTemplate">
+	<h1 style="margin-top:10px;" class="justify-center flex flex-row  text-white"> You are waiting for </h1>
+	<div>
+		<img style="margin-left: auto; margin-right: auto; margin-top:10px" width="100" height="100" class="flex flex-row rounded-full p-2" src="{{img}}" />
+	</div>
+	<a style="margin-top:10px; text-decoration: underline;" href="{{url}}" class="justify-center flex flex-row text-white">{{name}} </a>
+	<h1 style="margin-top:10px;" class="justify-center flex flex-row text-white"> to confirm the terms of the war : </h1>
+	<h1 style="margin-top:10px; font-size: 12px;" class="justify-center flex flex-row text-white"> Prize : {{war.prize}} points </h1>
+	<h1 style="font-size: 12px;" class="justify-center flex flex-row text-white"> Start: {{war.start}} </h1>
+	<h1 style="font-size: 12px;" class="justify-center flex flex-row text-white"> End: {{war.end}} </h1>
+	<h1 style="font-size: 12px;" class="justify-center flex flex-row text-white"> Time to answer War Time Calls: {{war.time_to_answer}} minutes </h1>
+	<h1 style="font-size: 12px; display:none" class="justify-center flex flex-row text-white"> Max tolerable unanswered war time calls: {{war.max_unanswered_calls}} </h1>
+	<h1 style="font-size: 12px;" class="justify-center flex flex-row text-white mt-2"> Include ladder games: {{war.inc_ladder}} </h1>
+	<h1 style="font-size: 12px;" class="justify-center flex flex-row text-white"> Include tournament games: {{war.inc_tour}} </h1>
+	<h1 style="font-size: 12px;" class="justify-center flex flex-row text-white"> Include friendly games: {{war.inc_friendly}} </h1>
+	{{#war.inc_friendly}}
+		<h1 style="font-size: 12px;" class="justify-center flex flex-row text-white"> Friendly Games levels:
+			{{#war.inc_easy}}
+				easy
+			{{/war.inc_easy}}
+			{{#war.inc_normal}}
+				normal
+			{{/war.inc_normal}}
+			{{#war.inc_hard}}
+				hard
+			{{/war.inc_hard}}
+		</h1>
+		<h1 style="font-size: 12px;" class="justify-center flex flex-row text-white"> Friendly Games maximum points:
+			{{#war.inc_three}}
+				3
+			{{/war.inc_three}}
+			{{#war.inc_six}}
+				6
+			{{/war.inc_six}}
+			{{#war.inc_nine}}
+				9
+			{{/war.inc_nine}}
+		</h1>
+	{{/war.inc_friendly}}
+	<div style="text-align: center">
+	<button class="underline text-white" style="font-size:11px;" id="wt-schedule">War Time Schedule</button>
+	</div>
+</script>

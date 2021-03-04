@@ -1,0 +1,21 @@
+<script type="text/html" id="tourListTemplate">
+	<h1 class="row text-white puce" style="text-align:center; font-size:11px">
+	<a style=" text-decoration: underline;" href="/tournaments/{{tour.id}}">{{tour.name}} Tournament</a>
+	{{^mine}}
+		{{#open}}
+		- Registration ends : {{tour.registration_end}}
+		{{/open}}
+		{{^open}}
+			{{#raging}}
+				- Round : {{status}}
+			{{/raging}}
+			{{^raging}}
+				- Registration starts : {{tour.registration_start}}
+			{{/raging}}
+		{{/open}}
+	{{/mine}}
+	{{#mine}}
+		- My status: {{tour.tournament_status}}
+	{{/mine}}
+	</h1>
+</script>

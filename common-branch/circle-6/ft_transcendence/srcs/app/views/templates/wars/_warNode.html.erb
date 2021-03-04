@@ -1,0 +1,28 @@
+<script type="text/html" id="warNodeTemplate">
+	<div class="flex flex-col justify-center items-center text-white text-md p-4 border-b border-teal-900">
+		<a class="text-center underline" href="guild/{{war.warOpponent.id}}">War against {{war.warOpponent.name}}</a>
+		<div class="text-sm">{{war.start}}-{{war.end}}</div>
+		<div class="flex flex-row items-center justify-around text-sm w-full">
+			<div>
+				<div>{{ang}} : {{war.war_points}} points </div>
+				<div>{{war.warOpponent.ang}} : {{war.warOpponent.war_points}} points</div>
+				{{^curr}}
+					{{#tie}}
+					<div>Tie</div>
+					{{/tie}}
+					{{^tie}}
+					<div> Winner : {{war.winner}} </div>
+					{{/tie}}
+				{{/curr}}
+				{{#curr}}
+				<div>Ongoing</div>
+				{{/curr}}
+			</div>
+			<div class="flex flex-col items-center justify-center">
+				<div>Prize : {{war.prize}} pts</div>
+				<div>{{war.nb_games }} games</div>
+				<div>{{war.nb_wartimes }} War times</div>
+			</div>
+		</div>
+	</div>
+</script>

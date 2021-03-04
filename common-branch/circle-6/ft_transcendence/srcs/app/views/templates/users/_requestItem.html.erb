@@ -1,0 +1,10 @@
+<script type="text/html" id="requestItemTemplate">
+	<div id="pending-request-{{id}}" class="flex flex-row items-center justify-around p-2 border-b border-teal-500">
+		<img class="rounded-full h-12 w-12" src="{{avatar_url}}"/>
+		<a class="underline text-lg font-semibold" href="/user/{{id}}">{{name}}</a>
+		<div class="space-x-4">
+			<button id="accept-btn" class="btn-primary" type="button">Accept</button>
+			<button id="refuse-btn" class="btn-primary" type="button">Refuse</button>
+		</div>
+	</div>
+</script>

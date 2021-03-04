@@ -1,0 +1,97 @@
+<script type="text/html" id="navbarTemplate">
+  <nav
+    class="bg-teal-500 text-white flex flex-row w-full items-center h-20 px-6"
+  >
+    <a
+      href="/"
+      class="tracking-tighter font-bold cursor-pointer text-center p-4 text-xl  flex flex-row items-center justify-center"
+    >
+      <svg
+        class="w-12"
+        viewBox="0 0 64 64"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="32" cy="32" r="32" fill="#494949" />
+        <circle cx="32" cy="32" r="6" fill="white" />
+        <line
+          x1="3.29289"
+          y1="37.2929"
+          x2="37.2929"
+          y2="3.29289"
+          stroke="white"
+          stroke-width="2"
+        />
+        <line
+          x1="25.2929"
+          y1="58.2929"
+          x2="59.2929"
+          y2="24.2929"
+          stroke="white"
+          stroke-width="2"
+        />
+      </svg>
+
+      <span class="ml-4">transcendance</span>
+    </a>
+    <ul class="flex flex-row space-x-6 ml-10 text-lg font-medium">
+      <li class="hover:underline"><a href="/play">Play</a></li>
+      <li class="hover:underline"><a href="/guilds">Guilds</a></li>
+      <li class="hover:underline"><a href="/tournaments">Tournaments</a></li>
+      <li class="hover:underline"><a href="/user/{{id}}">Profile</a></li>
+      <li class="hover:underline"><a href="/wars">Wars</a></li>
+      <li class="hover:underline"><a href="/help">Help</a></li>
+    </ul>
+	<div class="ml-auto flex flex-row items-center justify-center space-x-4">
+		<div id="btn-messages" class="relative cursor-pointer">
+		<svg
+			class="svg-btn"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+			fill-rule="evenodd"
+			clip-rule="evenodd"
+			d="M4.80111 3.5709C5.07434 2.92198 5.70987 2.5 6.41397 2.5H17.5877C18.2903 2.5 18.9248 2.9202 19.199 3.56709L22.9405 12.3948C22.9798 12.4874 23 12.5869 23 12.6875V20.25C23 21.2165 22.2165 22 21.25 22H2.75C1.7835 22 1 21.2165 1 20.25V12.75C1 12.65 1.01998 12.5511 1.05877 12.459L4.80111 3.5709ZM6.41397 4C6.31339 4 6.2226 4.06028 6.18357 4.15299L2.87956 12H8C8.26675 12 8.51343 12.1417 8.64783 12.3721L10.1808 15H13.8192L15.3522 12.3721C15.4852 12.144 15.7284 12.0027 15.9925 12L21.1223 11.9487L17.8179 4.15244C17.7787 4.06003 17.6881 4 17.5877 4H6.41397ZM21.5 13.445L16.4333 13.4957L14.8978 16.1279C14.7634 16.3583 14.5168 16.5 14.25 16.5H9.75C9.48325 16.5 9.23657 16.3583 9.10217 16.1279L7.56922 13.5H2.5V20.25C2.5 20.3881 2.61193 20.5 2.75 20.5H21.25C21.3881 20.5 21.5 20.3881 21.5 20.25V13.445Z"
+			fill="white"
+			/>
+		</svg>
+		<div id="message-pending" style="display:none" class="notifications-count">!</div>
+		</div>
+
+      <div id="btn-notifications" class="relative cursor-pointer">
+      <svg
+        class="svg-btn"
+        viewBox="0 0 20 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M10 0C6.31847 0 3 2.56545 3 6V10.5389C3 11.1805 2.81008 11.8078 2.45416 12.3417L0.254879 15.6406C0.088685 15.8899 0 16.1828 0 16.4824C0 17.3206 0.679449 18 1.51759 18H6.5C6.5 19.933 8.067 21.5 10 21.5C11.933 21.5 13.5 19.933 13.5 18H18.4824C19.3206 18 20 17.3206 20 16.4824C20 16.1828 19.9113 15.8899 19.7451 15.6406L17.5458 12.3417C17.1899 11.8078 17 11.1805 17 10.5389V6C17 2.56545 13.6815 0 10 0ZM4.5 6C4.5 3.63556 6.88254 1.5 10 1.5C13.1175 1.5 15.5 3.63556 15.5 6V10.5389C15.5 11.4767 15.7776 12.3935 16.2978 13.1737L18.497 16.4726C18.499 16.4755 18.5 16.4789 18.5 16.4824C18.5 16.4862 18.4989 16.489 18.4989 16.489C18.4989 16.489 18.497 16.4927 18.4948 16.4948C18.4927 16.497 18.489 16.4989 18.489 16.4989C18.489 16.4989 18.4862 16.5 18.4824 16.5H1.51759C1.51378 16.5 1.51097 16.4989 1.51097 16.4989C1.51097 16.4989 1.50729 16.497 1.50515 16.4948C1.50302 16.4927 1.50107 16.489 1.50107 16.489C1.50107 16.489 1.5 16.4862 1.5 16.4824C1.5 16.4789 1.50103 16.4755 1.50295 16.4726L3.70224 13.1737C4.22242 12.3935 4.5 11.4767 4.5 10.5389V6ZM12 18H8C8 19.1046 8.89543 20 10 20C11.1046 20 12 19.1046 12 18Z"
+          fill="white"
+        />
+      </svg>
+      <div  id="notif-count" class="notifications-count">
+      </div>
+      </div>
+      <svg
+        id="btn-logout"
+        class="svg-btn"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M3 3.25C3 2.2835 3.7835 1.5 4.75 1.5H10.25C10.6642 1.5 11 1.83579 11 2.25C11 2.66421 10.6642 3 10.25 3H4.75C4.61193 3 4.5 3.11193 4.5 3.25V20.75C4.5 20.8881 4.61193 21 4.75 21H10.25C10.6642 21 11 21.3358 11 21.75C11 22.1642 10.6642 22.5 10.25 22.5H4.75C3.7835 22.5 3 21.7165 3 20.75V3.25ZM19.0064 12.75L15.7055 16.2342C15.4207 16.5349 15.4335 17.0096 15.7342 17.2945C16.0349 17.5793 16.5096 17.5665 16.7945 17.2658L21.2945 12.5158C21.5685 12.2265 21.5685 11.7735 21.2945 11.4842L16.7945 6.73419C16.5096 6.43349 16.0349 6.42066 15.7342 6.70554C15.4335 6.99041 15.4207 7.46511 15.7055 7.76581L19.0063 11.25H10.75C10.3358 11.25 10 11.5858 10 12C10 12.4142 10.3358 12.75 10.75 12.75H19.0064Z"
+          fill="white"
+        />
+      </svg>
+      <div id="nav-profile" class="cursor-pointer"></div>
+    </div>
+  </nav>
+</script>

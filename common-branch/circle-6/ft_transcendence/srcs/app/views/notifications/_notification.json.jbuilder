@@ -1,0 +1,1 @@
+json.extract! notification, :id, :recipient_id, :message, :link, :read_at, :created_at, :updated_at

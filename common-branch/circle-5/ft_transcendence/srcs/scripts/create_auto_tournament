@@ -1,1 +1,0 @@
-/bin/bash -l -c 'cd /app && bundle exec bin/rails runner '\''Tournament.cron_create'\'' >> /app/log/cron.log 3>&1'

@@ -1,1 +1,0 @@
-json.extract! war, :inc_ladder, :inc_tour, :inc_friendly, :inc_easy, :inc_normal, :inc_hard, :inc_three, :inc_six, :inc_nine

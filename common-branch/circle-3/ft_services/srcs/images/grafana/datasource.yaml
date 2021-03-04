@@ -1,0 +1,18 @@
+# config file version
+apiVersion: 1
+
+# list of datasources to insert/update depending
+# what's available in the database
+datasources:
+- name: InfluxDB
+  type: influxdb
+  access: proxy
+  url: "http://influxdb:8086"
+  user: "noodles"
+  database: "telegraf"
+  jsonData:
+      httpMode: GET
+  secureJsonData:
+      password: spicy_noodles
+  editable: true
+

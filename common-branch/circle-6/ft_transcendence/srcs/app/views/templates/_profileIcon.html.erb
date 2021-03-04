@@ -1,0 +1,12 @@
+  <div class="relative h-16 w-16">
+	<img
+		id="btn-profile"
+		class="w-16 h-16 rounded-full p-2"
+		src="{{ avatar_url }}"
+	/>
+
+	<div class="presence-bg bg-teal-500">
+		<div class="presence--{{#inGame}}in_game{{/inGame}}{{^inGame}}{{#is_present}}online{{/is_present}}{{^is_present}}offline{{/is_present}}{{/inGame}}"> </div>
+	</div>
+
+  </div>

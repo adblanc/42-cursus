@@ -1,0 +1,39 @@
+<script type="text/html" id="ladderTemplate">
+<div class="flex" style="justify-content: center;">
+</div>
+    <div style=" float:left; margin-top:40px; margin-left:100px; margin-right: 150px"
+      class=" bg-teal-800  w-1/3 rounded-3xl flex flex-col flex-grow max-w-2xl shadow-2xl transition-shadow ease-in-out duration-300"
+    >
+		<div class="board-title">Members leaderboard</div>
+		<div class="py-5  rounded-b-3xl" id="list"></div>
+		<button id="load-more" class="load-more">
+			<svg class="w-6 text-white text-center fill-current" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0"/><path d="m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m256 384c-8.832031 0-16-7.167969-16-16v-224c0-8.832031 7.167969-16 16-16s16 7.167969 16 16v224c0 8.832031-7.167969 16-16 16zm0 0"/></svg>
+  		</button>
+	</div>
+		<div style="background-color:#115E59; margin-top:40px; padding:10px; text-align: center; font-size:11px"
+			class=" bg-teal-900 w-1/3 rounded-3xl flex flex-col flex-grow max-w-2xl max-h-2xl hover:shadow-2xl transition-shadow ease-in-out duration-300"
+		>
+			<div style="margin-top:5px; font-size:15px" class="justify-center text-white flex flex-row"><b> Your Ladder rank is {{ladder_rank}}. </b></div>
+			<div style="margin-top:10px" class="justify-center text-white flex flex-row"> You can play against an opponent that is ranked higher than you. </div>
+			<div class="justify-center text-white flex flex-row"> If you win, you will take the rank of your opponent. </div>
+			<div class="justify-center text-white flex flex-row"> If you fail to accept a ladder challenge within 5 minutes, you will automatically lose. </div>
+			<div class="justify-center text-white flex flex-row"> You cannot start or accept any other type of match if you have a pending ladder challenge. </div>
+
+			<div style="margin-top:10px; font-size:11px" class="text-white justify-center flex flex-row"> Ladder games are of normal difficulty and are played in 9 points. </div>
+
+			<div id="default" style="margin-top:15px; font-size:15px; display:none" class="justify-center text-white flex flex-row"><b> You have no pending ladder challenge </b></div>
+			<div id="accept" style="text-align: center; margin-top:15px; font-size:15px; display:none">
+				<div style="margin-top:10px" class="justify-center text-white flex flex-row"> {{pendingGameToAccept.opponent.name}}, rank {{pendingGameToAccept.opponent.ladder_rank}} has challenged you. </div>
+				<button id="accept-btn" class="btn-primary mt-3 animate-bounce" type="button">Accept!</button>
+			</div>
+			<div id="waiting" style="text-align: center; margin-top:15px; font-size:15px; display:none">
+				<div style="margin-top:10px" class="justify-center text-white flex flex-row"> You are waiting for {{pendingGame.opponent.name}}, rank {{pendingGame.opponent.ladder_rank}} to accept your ladder challenge. </div>
+			</div>
+			<div id="unavailable-pend" style="text-align: center; margin-top:15px; font-size:15px; display:none">
+				<div style="margin-top:10px" class="justify-center text-white flex flex-row"> You must finish your pending {{pendingGame.game_type}} game before starting or accepting a ladder challenge. </div>
+			</div>
+			<div id="unavailable-start" style="text-align: center; margin-top:15px; font-size:15px; display:none">
+				<div style="margin-top:10px" class="justify-center text-white flex flex-row"> You must finish your started game before starting or accepting a ladder challenge. </div>
+			</div>
+		</div>
+</script>

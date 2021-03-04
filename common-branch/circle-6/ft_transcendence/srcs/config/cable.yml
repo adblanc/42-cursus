@@ -1,0 +1,8 @@
+redis: &redis
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") { "redis://redis:6379" } %>
+
+production: *redis
+development: *redis
+test:
+  adapter: test

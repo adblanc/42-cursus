@@ -1,0 +1,37 @@
+{
+  "name": "active_storage",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.3.0",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "axios": "^0.21.0",
+    "backbone": "^1.4.0",
+    "backbone-associations": "^0.6.2",
+    "dotenv": "^8.2.0",
+    "flatpickr": "^4.6.6",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "mustache": "^4.0.1",
+    "tailwindcss": "^1.9.6",
+    "toastify-js": "^1.9.3",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.0.5",
+    "underscore": "^1.11.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/actioncable": "^5.2.3",
+    "@types/axios": "^0.14.0",
+    "@types/backbone": "^1.4.5",
+    "@types/flatpickr": "^3.1.2",
+    "@types/jquery": "^3.5.4",
+    "@types/mustache": "^4.0.1",
+    "@types/toastify-js": "^1.9.1",
+    "@types/underscore": "^1.10.24",
+    "@types/webpack-env": "^1.16.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

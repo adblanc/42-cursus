@@ -1,0 +1,51 @@
+<script type="text/html" id="tournamentFormTemplate">
+            <form action="">
+                <label class="block" for="tournament-name">
+                    <span class="text-gray-700">Name of the tournament*</span>
+                    <input
+                        class="form-input mt-1 block w-full"
+                        type="text"
+                        name="tournament-name"
+                        id="input-tournament-name"
+                    />
+				</label>
+				<label style="text-align: center;" class="block" for="tournament-start">
+                    <p class="text-gray-700">Registration start date : *</p>
+                    <input
+                        class="form-input mt-1 block w-full"
+                        type="datetime"
+						name="start-date"
+						placeholder="Click to select date"
+                        id="input-start-date"
+					/>
+				</label>
+				<label style="text-align: center;" class="block" for="tournament-end">
+                    <p class="text-gray-700">Registration end date : *</p>
+                    <input
+                        class="form-input mt-1 block w-full"
+						type="text"
+						placeholder="Click to select date"
+                        name="end-date"
+                        id="input-end-date"
+					/>
+				</label>
+                <label class="block mt-8" for="input-trophy-img">
+                    <span class="text-gray-700">Upload trophy picture: </span>
+                    <input
+                        class="form-input mt-1 block w-full"
+                        type="file"
+                        name="trophy-img"
+                        id="input-trophy-img"
+                    />
+                </label>
+                <div class="flex justify-center items-center">
+                    <button
+                        class="btn-primary mt-8"
+                        id="input-tournament-submit"
+                        type="submit"
+                    >
+                        Create Tournament
+                    </button>
+                </div>
+            </form>
+</script>

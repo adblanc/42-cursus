@@ -1,0 +1,32 @@
+<script type="text/html" id="challengeTemplate">
+	<h1 style="margin-top:10px;" class="justify-center flex flex-row"><b> You are about to challenge the opposite Guild to a match! </b></h1>
+	<h1 id="max-calls" style="margin-top:5px; font-size:12px; text-align:center" class="justify-center flex flex-row"> Reminder : If your challenge is not accepted within {{time_to_answer}} minutes, you will automatically win the match! </h1>
+	<h1 style="font-size:12px; display:none;" class="justify-center flex flex-row mb-5"> If {{max_unanswered_calls}} matches remain unaccepted, War Time will be over. </h1>
+	<form action="">
+          <label class="block" for="level-name">
+           <span >Choose difficulty</span>
+			<select name="level" id="level">
+				<option value="easy">Easy</option>
+				<option value="normal">Normal</option>
+				<option value="hard">Hard</option>
+			</select>
+			</label>
+            <label class="block mt-8" for="input-goal-img">
+                <span >Choose winning number of points: </span>
+                <select name="goal" id="goal">
+					<option value=3>3</option>
+					<option value=6>6</option>
+					<option value=9>9</option>
+				</select>
+            </label>
+            <div class="flex justify-center items-center">
+                <button
+                    class="btn-primary mt-8"
+                    id="input-challenge-submit"
+                    type="submit"
+                >
+                    Challenge!
+                </button>
+            </div>
+        </form>
+</script>
