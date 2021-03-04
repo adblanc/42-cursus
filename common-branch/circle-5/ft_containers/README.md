@@ -1,5 +1,7 @@
 # ft_containers
 
+![Project mark](./mark.png)
+
 _In this project you will implement the various containers types of the C++ standard
 template library._
 
