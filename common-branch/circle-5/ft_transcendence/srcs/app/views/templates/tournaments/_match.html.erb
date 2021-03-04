@@ -1,0 +1,28 @@
+<script type="text/html" id="matchTemplate">
+<div class="player">
+	{{^finished}}
+		<div class="player-name">{{players.0.name}}</div><div class="score">{{players.0.points}}</div>
+	{{/finished}}
+	{{#finished}}
+		{{#players.0.winner}}
+		<div class="player-name winner">{{players.0.name}}</div><div class="score winner"> {{players.0.points}}</div>
+		{{/players.0.winner}}
+		{{^players.0.winner}}
+		<div class="player-name loser">{{players.0.name}}</div><div class="score loser"> {{players.0.points}}</div>
+		{{/players.0.winner}}
+	{{/finished}}
+</div>
+<div class="player">
+	{{^finished}}
+		<div class="player-name">{{players.1.name}}</div><div class="score">{{players.1.points}}</div>
+	{{/finished}}
+	{{#finished}}
+		{{#players.1.winner}}
+		<div class="player-name winner">{{players.1.name}}</div><div class="score winner">{{players.1.points}}</div>
+		{{/players.1.winner}}
+		{{^players.1.winner}}
+		<div class="player-name loser">{{players.1.name}}</div><div class="score loser">{{players.1.points}}</div>
+		{{/players.1.winner}}
+	{{/finished}}
+</div>
+</script>

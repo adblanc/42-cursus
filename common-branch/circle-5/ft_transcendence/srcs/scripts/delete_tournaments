@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rails runner 'Sidekiq.redis { |conn| conn.flushdb }'
+rails runner 'TournamentUser.delete_all'
+rails runner 'Tournament.delete_all'

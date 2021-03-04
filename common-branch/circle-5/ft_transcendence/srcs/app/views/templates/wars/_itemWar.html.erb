@@ -1,0 +1,19 @@
+<script type="text/html" id="itemWarTemplate">
+	<div class="flex-row flex items-center justify-around border-b border-teal-900 p-4 text-white">
+		<div class="flex flex-col justify-center items-center">
+			<a class="underline" href="/guild/{{guilds.0.id}}">{{guilds.0.name}}</a>
+			<div class="h-10 text-center flex items-center justify-center"> VS </div>
+			<a class="underline" href="/guild/{{guilds.1.id}}">{{guilds.1.name}} </a>
+		</div>
+		<div>
+			<div class="flex flex-row text-white">{{guilds.0.war_points}} pts</div>
+			<div class="h-10"> </div>
+			<div class="flex flex-row text-white">{{guilds.1.war_points}} pts</div>
+		</div>
+		<div class="flex-col flex text-white items-center justify-center">
+			<div> for {{prize}} points</div>
+			<div>Ends {{end}}</div>
+		</div>
+	</div>
+</script>
+

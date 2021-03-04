@@ -1,0 +1,21 @@
+<script type="text/html" id="activeWarTimeTemplate">
+	<h1 style="margin-top:10px;font-size: 13px; text-align: center;" class="justify-center flex flex-row text-white "> War Time is activated until {{end}} ! </h1>
+	<div id="challenge" style="text-align: center; display:none">
+		<button id="challenge-btn" class="btn-primary mt-3 mb-3" type="button">Challenge someone!</button>
+	</div>
+	<div id="accept" style="text-align: center; display:none">
+		<button id="accept-btn" class="btn-primary mt-3 animate-bounce" type="button">One pending Challenge!</button>
+		<h1 style="margin-down:10px; font-size: 11px;" class="justify-center flex flex-row text-white"> Time left to accept : {{time_left}} </h1>
+	</div>
+	<div id="in-game" style="text-align: center; display:none">
+		<h1 style="margin-top:10px;font-size: 14px;" class="justify-center flex flex-row text-white "> A War Time Challenge is currently being played. </h1>
+	</div>
+	<div id="wait" style="text-align: center; display:none">
+		<h1 style="margin-top:10px;font-size: 14px;" class="justify-center flex flex-row text-white "> You are waiting for someone to answer your War Time Challenge. </h1>
+		<h1 style="margin-down:10px; font-size: 11px;" class="justify-center flex flex-row text-white"> Time left to accept : {{time_left}} </h1>
+	</div>
+	<div id="unavailable" style="text-align: center; display:none">
+		<h1 style="margin-top:10px;font-size: 14px;" class="justify-center flex flex-row text-white "> Someone from your guild has already initiated a War Time Challenge. </h1>
+	</div>
+	<h1 style="margin-down:10px; font-size: 11px;" class="justify-center flex flex-row text-white mt-3"> unanswered calls so far : {{unanswered_calls}} </h1>
+</script>

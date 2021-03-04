@@ -1,0 +1,141 @@
+<script type="text/html" id="negoTemplate">
+			<h1 style="margin-top:2px;" class="justify-center flex flex-row"><b> Pending War With : </b></h1>
+			<div>
+				<img style="margin-left: auto; margin-right: auto; margin-top:10px" width="100" height="100" class="flex flex-row rounded-full p-2" src="{{img}}" />
+			</div>
+			<a style="margin-top:10px; text-decoration: underline;" href="{{url}}" class="justify-center flex flex-row mb-4"><b>{{name}}</b></a>
+            <form action="">
+                <label style="text-align: center;" class="block mb-2" for="war-start">
+                    <p class="text-gray-700">Start date : {{war.start}} </p>
+                    <input
+                        class="form-input mt-1 block w-full"
+                        type="datetime-local"
+						name="start-date"
+						placeholder="Click here to change"
+                        id="input-start-date"
+					/>
+				</label>
+				<label style="text-align: center;" class="block mb-2" for="war end">
+                    <p class="text-gray-700">End date : {{war.end}} </p>
+                    <input
+                        class="form-input mt-1 block w-full"
+                        type="datetime-local"
+						name="end-date"
+						placeholder="Click here to change"
+                        id="input-end-date"
+					/>
+				</label>
+				<label style="text-align: center;" class="block mb-2" for="guild-start">
+					<p class="text-gray-700">Prize wagered (min. 2) :</p>
+					<p style="font-size:10px" class="text-gray-700">In case of a tie, prize will be split into two and any uneven point will be lost. </p>
+                    <input
+                        class="form-input mt-1 block w-full"
+                        type="text"
+						name="war-prize"
+						value="{{war.prize}}"
+                        id="input-prize"
+                    />
+				</label>
+				<label style="text-align: center;" class="block" for="answer-time">
+				<p class="text-gray-700">Time to answer a War Time challenge (in minutes) : </p>
+				<p style="font-size:10px" class="text-gray-700">The game will be automatically won after that time</p>
+				<input
+					class="form-input mt-1 block w-full"
+					type="text"
+					name="answer-time"
+					value="{{war.time_to_answer}}"
+					id="answer-time"
+				/>
+				</label>
+				<label style="text-align: center;" class="block" for="max-calls">
+					<p class="text-gray-700">Maximum unanswered calls tolerable during War Time (optional) : </p>
+					<p style="font-size:10px" class="text-gray-700">If reached, War Time will be over.</p>
+					<input
+						class="form-input mt-1 block w-full"
+						type="text"
+						id="max-calls"
+						value="{{war.max_unanswered_calls}}"
+						id="max-calls"
+					/>
+				</label>
+				<label style="text-align: center;" class="block" for="war-times">
+					<p class="text-gray-700">War Times </p>
+					<p style="font-size:10px" class="text-gray-700">There must be at least one war time scheduled</p>
+					<div id="wt-schedule"></div>
+				</label>
+				<div style="text-align: center; font-size:11px" class="block mt-2" for="includes">
+					<h1 class="text-gray-700">Include ladder games in the war effort :
+                    <input
+                        type="checkbox"
+                        name="inc-ladder"
+                        id="inc-ladder"
+					/></h1>
+					<h1 class="text-gray-700 ">Include tournament games in the war effort :
+                    <input
+                        type="checkbox"
+                        name="inc-tour"
+                        id="inc-tour"
+					/></h1>
+					<h1 class="text-gray-700">Include friendly games in the war effort :
+					<input
+						type="checkbox"
+						name="inc-friendly"
+						id="inc-friendly"
+					/></h1>
+					<div id="custom" style="display:none">
+						<h1 class="text-gray-700 m-2">Select all that apply :</h1>
+						<h1>
+							<span class="text-gray-700">Easy :</span>
+							<input
+								type="checkbox"
+								name="inc-easy"
+								id="inc-easy"
+							/>
+							<span class="text-gray-700">Normal :</span>
+							<input
+								type="checkbox"
+								name="inc-normal"
+								id="inc-normal"
+							/>
+							<span class="text-gray-700">Hard :</span>
+							<input
+								type="checkbox"
+								name="inc-hard"
+								id="inc-hard"
+							/>
+						</h1>
+						<h1>
+							<span class="text-gray-700">3 points:</span>
+							<input
+								type="checkbox"
+								name="three-points"
+								id="three-points"
+							/>
+							<span class="text-gray-700">6 points:</span>
+							<input
+								type="checkbox"
+								name="six-points"
+								id="six-points"
+							/>
+							<span class="text-gray-700">9 points:</span>
+							<input
+								type="checkbox"
+								name="nine-points"
+								id="nine-points"
+							/>
+						</h1>
+					</div>
+				</div>
+				<div id="ranked" style="display:none;" >
+					<button style="margin-left:180px" class="btn-nego floated mt-6 rounded-lg shadow-lg py-1 px-2" id="accept" type="button">Accept</button>
+					<button class="floated mt-6 bg-red-400 text-white rounded-lg shadow-lg py-1 px-2" id="reject" type="button">Reject</button>
+					<div>
+						<button style="margin-left:110px" class="btn-nego-disabled mt-4 rounded-lg shadow-lg py-1 px-2" id="negotiate" type="button">Send back your proposed changes</button>
+					</div>
+				</div>
+				<div id="member" class="mt-4 ml-3" style="display:none">
+					<h1><b> ! You need to be an officer or higher to negotiate this war !</b></h1>
+				</div>
+
+            </form>
+</script>

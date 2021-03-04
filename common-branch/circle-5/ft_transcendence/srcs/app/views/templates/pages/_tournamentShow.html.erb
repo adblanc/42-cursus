@@ -1,0 +1,51 @@
+<script type="text/html" id="tournamentShowTemplate">
+<div class="tournament-header"><h1>{{name}} Tournament</h1></div>
+<div class="bracket-container">
+  <div class="round" id="round1"></div>
+  <div class="round" id="round2"></div>
+  <div class="round" id="round3"></div>
+</div>
+<div class="info-container">
+	<div>
+		<img style="margin-left: auto; margin-right: auto; margin-top:10px" width="100" height="100" class="flex flex-row rounded-full p-2" src="{{trophy_url}}" />
+	</div>
+	{{#owner}}
+	<h1 class="justify-center text-white flex flex-row" style="font-size:11px; text-align: center;">Organized by: &nbsp<a style=" text-decoration: underline;" href="/user/{{owner.id}}"> {{owner.name}}</a></h1>
+	{{/owner}}
+	<h1 class="justify-center text-white flex flex-row mt-2" style="font-size:13px; text-align: center;"> Registration start: {{registration_start}} </h1>
+	<h1 class="justify-center text-white flex flex-row" style="font-size:13px; text-align: center;"> Registration end: {{registration_end}} </h1>
+	<h1 class="justify-center text-white flex flex-row mt-2" style="font-size:13px; text-align: center;"> Phase: {{status}} </h1>
+	{{#registration}}
+		{{#full}}
+		<h1 class="justify-center text-white flex flex-row" style="font-size:13px; text-align: center;">This tournament is full. It will start {{countStart}}.</h1>
+		{{/full}}
+		{{^user_status}}
+			{{^full}}
+			<div style="text-align: center">
+				<button id="register-btn" class="btn-primary mt-3 mb-3" type="button">Register</button>
+			</div>
+			{{/full}}
+		{{/user_status}}
+	{{/registration}}
+	{{#pending}}
+	<h1 class="justify-center text-white flex flex-row" style="font-size:11px; text-align: center;">Registrations will start {{countRegistration}}.</h1>
+	{{/pending}}
+	{{#finished}}
+		{{#winner}}
+		<h1 class="justify-center text-white flex flex-row" style="font-size:13px; text-align: center;">Winner : &nbsp<a style="text-decoration: underline;" href="/user/{{winner.id}}">{{winner.name}}</a></h1>
+		{{/winner}}
+		{{^winner}}
+		<h1 class="justify-center text-white flex flex-row" style="font-size:13px; text-align: center;">Winner : The final was not played.</h1>
+		{{/winner}}
+	{{/finished}}
+	{{#user_status}}
+	<h1 class="justify-center text-white flex flex-row mt-2" style="font-size:13px; text-align: center;">You are registered to this tournament.</h1>
+		<h1 class="justify-center text-white flex flex-row" style="font-size:13px; text-align: center;">Your status : {{user_status}}</h1>
+	{{/user_status}}
+	<div id="game-to-play" style="display:none">
+		<h1 class="justify-center flex flex-row mt-2" style="text-align: center; color:#ef6666;" > <=== You have a game to play for this tournament. </h1>
+		<h1 class="justify-center text-white flex flex-row" style="font-size:11px; text-align: center;" > If you don't play your match and your opponent does not as well, the winner will be selected at random, except for the final. </h1>
+	</div>
+	<h1 class="justify-center text-white flex flex-row mt-2" style="font-size:11px; text-align: center;" > Tournaments matches are of hard difficulty and are played in 9 points. </h1>
+</div>
+</script>

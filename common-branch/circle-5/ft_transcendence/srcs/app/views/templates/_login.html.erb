@@ -1,0 +1,53 @@
+<script type="text/html" id="loginTemplate">
+  <div class="flex h-screen">
+    <div
+      class="bg-teal-900 m-auto px-32 py-24 max-w-3xl rounded-3xl flex flex-col items-center justify-center hover:shadow-2xl transition-shadow ease-in-out duration-300"
+    >
+      <div class="flex flex-row items-center justify-center mb-24">
+        <svg
+          width="98"
+          height="98"
+          viewBox="0 0 98 98"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="49" cy="49" r="49" fill="#494949" />
+          <circle cx="49" cy="49" r="9.1875" fill="white" />
+          <line
+            x1="5.41789"
+            y1="57.4804"
+            x2="57.4804"
+            y2="5.4179"
+            stroke="white"
+            stroke-width="2"
+          />
+          <line
+            x1="39.1054"
+            y1="89.6366"
+            x2="91.1679"
+            y2="37.5742"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+
+        <h1 class="text-4xl text-white ml-8 font-bold">Transcendance</h1>
+      </div>
+
+      <a class="font-semibold btn-primary--lg mb-8" href="{{42_LOGIN_URL}}"
+        >Login with 42</a
+      >
+      <form action="" method="get">
+        <label class="block" for="input-guest">
+          <span class="text-white font-semibold">Login as guest</span>
+          <input
+            class="form-input block mt-1"
+            type="text"
+            name="input-guest"
+            id="input-guest"
+          />
+        </label>
+      </form>
+    </div>
+  </div>
+</script>

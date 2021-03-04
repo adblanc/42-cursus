@@ -1,0 +1,13 @@
+*/**/*.opp
+*/**/a.out
+*/**/*.swp
+*.swp
+tmp/**/*
+!tmp/.gitkeep
+.vscode
+server
+test
+client
+test.php
+proxy/logs
+proxy/proxy

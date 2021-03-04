@@ -1,0 +1,12 @@
+<script type="text/html" id="notifTemplate">
+  <div id="notif-item" class="mt-5 ml-5 mr-5">
+  	<div style="font-size:10px;">{{created_at}}</div>
+		{{#link}}
+			<a id="content" class="mt-2" href="{{link}}">{{message}}</a>
+		{{/link}}
+
+		{{^link}}
+			<span id="trigger-notif" class="mt-2 cursor-pointer">{{message}}</span>
+		{{/link}}
+  </div>
+</script>

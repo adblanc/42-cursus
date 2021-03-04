@@ -1,0 +1,30 @@
+<script type="text/html" id="chatplayTemplate">
+	<h1 style="margin-top:5px; margin-bottom:10px" class="justify-center flex flex-row"><b> Friendly match request: </b></h1>
+	<form action="">
+          <label class="block" for="level">
+           <span >Choose difficulty</span>
+			<select name="level" id="level">
+				<option value="easy">Easy</option>
+				<option value="normal">Normal</option>
+				<option value="hard">Hard</option>
+			</select>
+			</label>
+            <label class="block mt-8" for="input-guild-img">
+                <span >Choose winning number of points: </span>
+                <select name="goal" id="goal">
+					<option value=3>3</option>
+					<option value=6>6</option>
+					<option value=9>9</option>
+				</select>
+            </label>
+            <div class="flex justify-center items-center">
+                <button
+                    class="btn-primary mt-8"
+                    id="input-chatplay-submit"
+                    type="submit"
+                >
+                    Send match request
+                </button>
+            </div>
+        </form>
+</script>
